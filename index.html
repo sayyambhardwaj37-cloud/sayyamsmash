@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Dash - Endless Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game">
+    <canvas id="gameCanvas"></canvas>
+
+    <div class="hud">
+      <div>DISTANCE <strong id="distance">0 m</strong></div>
+      <div>COINS <strong id="coins">0</strong></div>
+      <div>SCORE <strong id="score">0</strong></div>
+    </div>
+
+    <section id="startScreen" class="screen">
+      <div class="panel">
+        <p class="tag">ENDLESS RUNNER GAME</p>
+        <h1>TEMPLE <span>DASH</span></h1>
+        <p>Run through the ancient jungle, avoid obstacles, and collect golden coins!</p>
+        <p class="instructions">
+          ← → Change lane<br>
+          ↑ or SPACE Jump<br>
+          ↓ Slide
+        </p>
+        <button id="startButton">START RUN</button>
+        <small>No installation required</small>
+      </div>
+    </section>
+
+    <section id="gameOverScreen" class="screen hidden">
+      <div class="panel">
+        <p class="tag">RUN FINISHED</p>
+        <h2>GAME OVER</h2>
+        <p>Your adventure has ended.</p>
+        <div class="finalStats">
+          <p>Distance: <strong id="finalDistance">0 m</strong></p>
+          <p>Coins: <strong id="finalCoins">0</strong></p>
+          <p>Score: <strong id="finalScore">0</strong></p>
+        </div>
+        <button id="restartButton">PLAY AGAIN</button>
+      </div>
+    </section>
+
+    <div class="mobileControls">
+      <button data-action="left" aria-label="Left">◀</button>
+      <div>
+        <button data-action="jump" aria-label="Jump">▲</button>
+        <button data-action="slide" aria-label="Slide">▼</button>
+      </div>
+      <button data-action="right" aria-label="Right">▶</button>
+    </div>
+
+    <div id="message"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
